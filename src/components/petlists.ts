@@ -1,11 +1,11 @@
-import { TASKS } from '../../models/data.js';
-import { Task } from '../../models/task.js';
-import { AddTask } from './add-task.js';
-import { Component } from './component.js';
+import { PETS } from '../models/data-pets.js';
+import { Pet } from '../models/pets.js';
+import { AddPet } from '../pet-add.js';
+import { Component } from './old/component.js';
 
-export class TaskList extends Component {
+export class PetList extends Component {
     template!: string;
-    tasks = [...TASKS];
+    pets = [...PETS];
     constructor(public selector: string) {
         super();
         this.manageComponent();
@@ -13,7 +13,7 @@ export class TaskList extends Component {
     manageComponent() {
         this.template = this.createTemplate();
         this.render(this.selector, this.template);
-        new AddTask('slot#add-task');
+        new AddPet('slot#add-task');
         setTimeout(() => {
             document
                 .querySelector('form')
@@ -34,9 +34,9 @@ export class TaskList extends Component {
                 <h2>Tareas</h2>
                 <slot id="add-task"></slot>
                 <ul>`;
-        this.tasks.forEach((item: Task) => {
+        this.pets.forEach((item: Pet) => {
             template += `
-            <li> ${item.id} - ${item.title} 
+            <li> ${item.id} - ${item.name} - ${item.breed} - ${item.owner}
             <span class="eraser" data-id="${item.id}">🗑️</span>
             </li>`;
         });
@@ -45,19 +45,21 @@ export class TaskList extends Component {
         return template;
     }
     handleAdd(ev: Event) {
-        ev.preventDefault();
-        const title = (document.querySelector('#title') as HTMLInputElement)
-            .value;
-        const responsible = (
-            document.querySelector('#resp') as HTMLInputElement
+        const name = (
+            document.querySelector('#first-answer') as HTMLInputElement
         ).value;
-        this.tasks.push(new Task(title, responsible));
+        const breed = (
+            document.querySelector('#second-answer') as HTMLInputElement
+        ).value;
+        const owner = (
+            document.querySelector('#third-answer') as HTMLInputElement
+        ).value;
+        this.pets.push(new Pet(name, breed, owner));
         this.manageComponent();
     }
-
     handlerEraser(ev: Event) {
         const deletedID = (ev.target as HTMLElement).dataset.id;
-        this.tasks = this.tasks.filter(
+        this.pets = this.pets.filter(
             (item) => item.id !== +(deletedID as string)
         );
         this.manageComponent();

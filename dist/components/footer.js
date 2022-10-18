@@ -1,13 +1,13 @@
-import { Component } from './component.js';
+import { Component } from './old/component.js';
 export class Footer extends Component {
     constructor(selector) {
         super();
         this.selector = selector;
-        this.template = this.createTemplate();
-        this.renderAdd(this.selector, this.template);
+        this.HTMLtemplate = this.createTemplate();
+        this.renderAdd(this.selector, this.HTMLtemplate);
     }
     createTemplate() {
         return `
-        <footer>ISDI Coders</footer>`;
+        <footer><address>Rafael ISDI Coders</address></footer>`;
     }
 }

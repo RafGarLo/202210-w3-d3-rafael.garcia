@@ -3,13 +3,13 @@ export class Header extends Component {
     constructor(selector) {
         super();
         this.selector = selector;
-        this.template = this.createTemplate();
-        this.renderAdd(this.selector, this.template);
+        this.HTMLtemplate = this.createTemplate();
+        this.renderAdd(this.selector, this.HTMLtemplate);
     }
     createTemplate() {
         return `
         <header>
-        <h1>TODO List</h1>
+        <h1>PETS</h1>
     </header>`;
     }
 }
