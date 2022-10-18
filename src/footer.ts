@@ -1,4 +1,4 @@
-import { Component } from './component.js';
+import { Component } from './components/old/component.js';
 
 export class Footer extends Component {
     template: string;

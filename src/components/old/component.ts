@@ -16,7 +16,7 @@ export abstract class Component {
     renderOuter(selector: string, template: string) {
         const element = document.querySelector(selector);
         if (element === null) return false;
-        element.outerHTML = template;
+        element.outerHTML += template;
         return false;
     }
 }
