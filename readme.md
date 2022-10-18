@@ -1,24 +1,26 @@
-1. modules (ESM)
-2. prettier + editorconfig
-3. eslint
-    - prettier
-    - jest
-    - modulos (ESM)
-    - typescript
-4. Jest
-    - ESM
-    - typescript
-    -
-5. TS
-    - install
-        ```shell
-        - npm i -D typescript @types/node ts-node
-        ```
-        - creamos configuracion
-        ```shell
-        tsc --int
-        ```
-        - Ajustes config
-          -module ESNext
-          -rootDir: ./src
-          -outDir: ./dist
+# week 3 day 2 challenge Rafael Garcia
+
+Pet List
+
+    Cada mascota es un objeto con
+        id
+        name
+        raza/especie
+        isAdopted
+        padre/madre adoptivo = dueño
+
+    Existe una lista inicial (JS)
+
+    Se listan las mascotas
+
+-------- Create - Read - Update - Delete
+
+    Se puede añadir mascotas
+
+    Se borran mascotas
+
+    Se puede adoptar una mascotas |-> opcional
+
+----- Componentes: Clases: Component / Cada componente
+
+--- Header --- Footer --- Lista --- Item (Mascota) |-> opcional --- Añadir

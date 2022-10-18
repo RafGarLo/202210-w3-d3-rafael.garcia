@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header,
+footer {
+    flex: 1 0 auto;
+    color: bisque;
+    background-color: rgb(213, 112, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    flex: 10 0 auto;
+    margin: 1rem;
+    padding: 1rem;
+}
