@@ -1,11 +1,11 @@
-import { Component } from './components/old/component.js';
+import { Component } from './old/component.js';
 
 export class Header extends Component {
-    template: string;
+    HTMLtemplate: string;
     constructor(public selector: string) {
         super();
-        this.template = this.createTemplate();
-        this.renderAdd(this.selector, this.template);
+        this.HTMLtemplate = this.createTemplate();
+        this.renderAdd(this.selector, this.HTMLtemplate);
     }
     createTemplate() {
         return `
