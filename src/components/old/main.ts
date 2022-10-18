@@ -9,7 +9,17 @@ export class Main extends Component {
     }
     createTemplate() {
         return `
-         <main>
-            </main>`;
+          <main>
+        <section>
+            <h2>List of Pets</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+               
+                
+            
+        </section>
+
+    </main>`;
     }
 }

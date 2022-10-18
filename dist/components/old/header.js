@@ -9,7 +9,7 @@ export class Header extends Component {
     createTemplate() {
         return `
         <header>
-        <h1>TODO List</h1>
+        <h1>PETS</h1>
     </header>`;
     }
 }
