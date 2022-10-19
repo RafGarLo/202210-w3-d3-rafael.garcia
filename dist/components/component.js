@@ -7,7 +7,7 @@ export class Component {
         if (element === null)
             return false;
         element.innerHTML = template;
-        return false;
+        return true;
     }
     renderAdd(selector, template) {
         if (!selector)
@@ -16,7 +16,7 @@ export class Component {
         if (element === null)
             return false;
         element.innerHTML += template;
-        return false;
+        return true;
     }
     renderOuter(selector, template) {
         if (!selector)
@@ -25,6 +25,6 @@ export class Component {
         if (element === null)
             return false;
         element.outerHTML += template;
-        return false;
+        return true;
     }
 }
