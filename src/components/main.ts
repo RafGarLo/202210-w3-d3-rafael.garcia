@@ -1,17 +1,15 @@
 import { Component } from './component.js';
 
 export class Main extends Component {
-    HTMLtemplate: string;
+    template: string;
     constructor(public selector: string) {
         super();
-        this.HTMLtemplate = this.createTemplate();
-        this.renderAdd(this.selector, this.HTMLtemplate);
+        this.template = this.createTemplate();
+        this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
         return `
           <main>
-        
-
-    </main>`;
+          </main>`;
     }
 }
