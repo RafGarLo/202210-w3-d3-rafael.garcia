@@ -6,4 +6,5 @@ import { PetList } from './components/petlists.js';
 new Header('body');
 new Main('body');
 new PetList('main');
+
 new Footer('body');

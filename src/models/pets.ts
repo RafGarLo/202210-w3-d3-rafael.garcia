@@ -1,5 +1,6 @@
 export class Pet {
     id: number;
+    isAdopted: boolean;
 
     static createId() {
         return Math.round(Math.random() * 1_000_000);
@@ -14,5 +15,6 @@ export class Pet {
         this.name = name;
         this.breed = breed;
         this.owner = owner;
+        this.isAdopted = false;
     }
 }
