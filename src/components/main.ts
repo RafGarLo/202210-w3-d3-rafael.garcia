@@ -10,15 +10,7 @@ export class Main extends Component {
     createTemplate() {
         return `
           <main>
-        <section>
-            <h2>List of Pets</h2>
-            <div></div>
-            <div></div>
-            <div></div>
-               
-                
-            
-        </section>
+        
 
     </main>`;
     }

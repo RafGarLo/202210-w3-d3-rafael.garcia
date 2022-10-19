@@ -24,7 +24,7 @@ export class PetList extends Component {
     }
     createTemplate() {
         let template = `<section>
-                <h2>Tareas</h2>
+                <h2>List of Pets</h2>
                 <slot id="add-task"></slot>
                 <ul>`;
         this.pets.forEach((item) => {
