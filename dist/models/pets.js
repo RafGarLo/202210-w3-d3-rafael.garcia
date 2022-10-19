@@ -7,6 +7,7 @@ export class Pet {
         this.name = name;
         this.breed = breed;
         this.owner = owner;
+        this.isAdopted = false;
     }
     static createId() {
         return Math.round(Math.random() * 1000000);

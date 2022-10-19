@@ -1,4 +1,4 @@
-import { Component } from './old/component.js';
+import { Component } from './component.js';
 
 export class Main extends Component {
     HTMLtemplate: string;

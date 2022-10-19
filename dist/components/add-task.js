@@ -1,8 +1,9 @@
 import { Component } from './component.js';
-export class AddTask extends Component {
-    constructor(selector) {
+export class PetTask extends Component {
+    constructor(selector, item) {
         super();
         this.selector = selector;
+        this.item = item;
         this.template = this.createTemplate();
         this.renderOuter(this.selector, this.template); //borra el componente una vez se ha mostrado, creo
     }
