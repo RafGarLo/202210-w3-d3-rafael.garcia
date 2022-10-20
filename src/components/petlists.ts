@@ -1,6 +1,6 @@
 import { PETS } from '../models/data-pets.js';
 import { Pet } from '../models/pets.js';
-import { AddPet } from './add-pets';
+import { AddPet } from './add-pets.js';
 import { Component } from './component.js';
 import { Store } from '../services/storage.js';
 import { ItemPet } from './item.pets.js';
@@ -45,15 +45,12 @@ export class PetList extends Component {
     }
     handleAdd(ev: Event) {
         ev.preventDefault();
-        const name = (
-            document.querySelector('#first-answer') as HTMLInputElement
-        ).value;
-        const breed = (
-            document.querySelector('#second-answer') as HTMLInputElement
-        ).value;
-        const owner = (
-            document.querySelector('#third-answer') as HTMLInputElement
-        ).value;
+        const name = (document.querySelector('#pet-name') as HTMLInputElement)
+            .value;
+        const breed = (document.querySelector('#breed') as HTMLInputElement)
+            .value;
+        const owner = (document.querySelector('#owner') as HTMLInputElement)
+            .value;
         this.pets.push(new Pet(name, breed, owner));
         this.storeService.setStore(this.pets);
         this.manageComponent();

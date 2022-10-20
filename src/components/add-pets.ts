@@ -30,7 +30,7 @@ export class AddPet extends Component {
                 <input type="text" id="breed" placeholder="What is the pet breed?">
             </div>
             <div>
-                <input type="text" id="adopter-name" placeholder="Who is going to be the owner?">
+                <input type="text" id="owner" placeholder="Who is going to be the owner?">
             </div>
             <button type="submit">Send</button>
         </form>`;
