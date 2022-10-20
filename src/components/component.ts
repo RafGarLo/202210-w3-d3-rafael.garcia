@@ -23,3 +23,14 @@ export abstract class Component {
         return true;
     }
 }
+
+/*
+export interface IComponent {
+    createTemplate: () {
+        
+    }
+    manageComponent() {
+
+    }
+}
+*/
