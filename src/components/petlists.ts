@@ -45,15 +45,12 @@ export class PetList extends Component {
     }
     handleAdd(ev: Event) {
         ev.preventDefault();
-        const name = (
-            document.querySelector('#first-answer') as HTMLInputElement
-        ).value;
-        const breed = (
-            document.querySelector('#second-answer') as HTMLInputElement
-        ).value;
-        const owner = (
-            document.querySelector('#third-answer') as HTMLInputElement
-        ).value;
+        const name = (document.querySelector('#pet-name') as HTMLInputElement)
+            .value;
+        const breed = (document.querySelector('#breed') as HTMLInputElement)
+            .value;
+        const owner = (document.querySelector('#owner') as HTMLInputElement)
+            .value;
         this.pets.push(new Pet(name, breed, owner));
         this.storeService.setStore(this.pets);
         this.manageComponent();
