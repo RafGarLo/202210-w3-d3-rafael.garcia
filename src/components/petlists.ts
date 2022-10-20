@@ -1,6 +1,6 @@
 import { PETS } from '../models/data-pets.js';
 import { Pet } from '../models/pets.js';
-import { AddPet } from './add-pets';
+import { AddPet } from './add-pets.js';
 import { Component } from './component.js';
 import { Store } from '../services/storage.js';
 import { ItemPet } from './item.pets.js';
